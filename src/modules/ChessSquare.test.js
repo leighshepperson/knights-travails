@@ -10,4 +10,44 @@ describe('ChessSquare', () => {
     const chessSquare = new ChessSquare(3, 5);
     expect(chessSquare.y).toEqual(5);
   });
+
+  describe('parse', () => {
+    const testCases = [
+      {
+        input: 'A1',
+        x: 0,
+        y: 0,
+      },
+      {
+        input: 'H8',
+        x: 7,
+        y: 7,
+      },
+      {
+        input: 'A8',
+        x: 0,
+        y: 7,
+      },
+      {
+        input: 'H1',
+        x: 7,
+        y: 0,
+      },
+      {
+        input: 'E4',
+        x: 4,
+        y: 3,
+      },
+    ];
+
+    testCases.map(({ input, x, y }) =>
+      test(`should parse ${input} as ChessSquare with x = ${x} and y = ${
+        y
+      }`, () => {
+        const chessSquare = ChessSquare.parse(input);
+        expect(chessSquare.x).toEqual(x);
+        expect(chessSquare.y).toEqual(y);
+      })
+    );
+  });
 });
