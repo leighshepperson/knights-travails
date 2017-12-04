@@ -3,8 +3,8 @@ const KnightsTravalis = require('./KnightsTravalis');
 describe('KnightsTravalis', () => {
   describe('nextMoves', () => {
     const testCases = [
-      ['A1', ['B3', 'C2']],
-      ['E4', ['F6', 'D6', 'F2', 'D2', 'G5', 'C5', 'G3', 'C3']],
+      ['A1', ['C2', 'B3']],
+      ['E4', ['D2', 'G3', 'C5', 'G5', 'C3', 'F6', 'F2', 'D6']],
     ];
 
     testCases.map(([square, nextSquares]) =>
@@ -24,6 +24,16 @@ describe('KnightsTravalis', () => {
         expect(knightsTravalis.shortestPath(start, end).length).toEqual(length);
       })
     );
+
+    test('should return the shortest path between A8 and B7', () => {
+      const knightsTravalis = new KnightsTravalis();
+      expect(knightsTravalis.shortestPath('A8', 'B7')).toEqual([
+        'C7',
+        'B5',
+        'D6',
+        'B7',
+      ]);
+    });
 
     test('should return empty array from same square', () => {
       const knightsTravalis = new KnightsTravalis();
