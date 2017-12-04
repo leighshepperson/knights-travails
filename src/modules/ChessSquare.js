@@ -25,6 +25,10 @@ class ChessSquare {
     return this._y;
   }
 
+  isValid() {
+    return this._x > -1 && this._x < 8 && this._y > -1 && this._y < 8;
+  }
+
   toString() {
     return `${String.fromCharCode(this._x + 65)}${this._y + 1}`;
   }

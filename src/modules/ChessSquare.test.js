@@ -18,6 +18,25 @@ describe('ChessSquare', () => {
     });
   });
 
+  describe('isValid', () => {
+    const testCases = [[0, 0], [0, 7], [7, 7], [7, 0], [5, 6]];
+
+    testCases.map(([x, y]) =>
+      test(`it should return true if ${x}, ${
+        y
+      } is inside the chess board`, () => {
+        const chessSquare = new ChessSquare(x, y);
+        expect(chessSquare.isValid()).toBeTruthy();
+      })
+    );
+
+    test('it should return false if coords are not inside the chess board', () => {
+      const chessSquare = new ChessSquare(-11, 4);
+
+      expect(chessSquare.isValid()).toBeFalsy();
+    });
+  });
+
   describe('parse', () => {
     const testCases = [
       {
