@@ -1,13 +1,11 @@
 # Knights Travalis
 
-Computes the shortest path\* a knight can take between two squares on a chess
+Computes the shortest path a knight can take between two squares on a chess
 board.
-
-\* There are actually many shortest paths, but they all have the same length...
 
 ## External libraries
 
-* [Commander](https://github.com/tj/commander.js/): node.js command-line
+* [Commander](https://github.com/tj/commander.js/): A node.js command-line
   interface
 
 ## Architecture
@@ -53,13 +51,13 @@ Run the app (node index.js) from the root directory using the shortestPath (sp)
 option:
 
 ```
-shortestPath|sp <startSquare> <endSquare>  Returns a shortest path a knight can take between <startSquare> and <endSquare>.
+shortestPath|sp <startSquare> <endSquare>  Returns the shortest path a knight can take between <startSquare> and <endSquare>.
 ```
 
 ## Example
 
 ```
-node index.js shortestPath A8 B7
+node index shortestPath A8 B7
 
 C7 B5 D6 B7
 ```
