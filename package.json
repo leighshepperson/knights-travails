@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "eslint": "^4.12.1",
     "jest": "^21.2.1"
   },
   "scripts": {
@@ -15,7 +16,10 @@
     "type": "git",
     "url": "git+https://github.com/leighshepperson/knights-travails.git"
   },
-  "keywords": ["Node", "js"],
+  "keywords": [
+    "Node",
+    "js"
+  ],
   "author": "Leigh Shepperson",
   "license": "MIT",
   "bugs": {
