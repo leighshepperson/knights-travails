@@ -16,6 +16,15 @@ describe('KnightsTravalis', () => {
   });
 
   describe('shortestPath', () => {
+    const testCases = [['A8', 'B7', 4], ['A8', 'H1', 6]];
+
+    testCases.map(([start, end, length]) =>
+      test(`the shortest path should have length ${length}`, () => {
+        const knightsTravalis = new KnightsTravalis();
+        expect(knightsTravalis.shortestPath(start, end).length).toEqual(length);
+      })
+    );
+
     test('should return empty array from same square', () => {
       const knightsTravalis = new KnightsTravalis();
       expect(knightsTravalis.shortestPath('A1', 'A1')).toEqual([]);
