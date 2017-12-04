@@ -8,16 +8,14 @@
     "jest": "^21.2.1"
   },
   "scripts": {
-    "test": "test"
+    "test": "jest",
+    "test:w": "jest --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leighshepperson/knights-travails.git"
   },
-  "keywords": [
-    "Node",
-    "js"
-  ],
+  "keywords": ["Node", "js"],
   "author": "Leigh Shepperson",
   "license": "MIT",
   "bugs": {
