@@ -1,0 +1,27 @@
+{
+  "name": "knights-travails",
+  "version": "1.0.0",
+  "description": "Knights Travalis",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^21.2.1"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leighshepperson/knights-travails.git"
+  },
+  "keywords": [
+    "Node",
+    "js"
+  ],
+  "author": "Leigh Shepperson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leighshepperson/knights-travails/issues"
+  },
+  "homepage": "https://github.com/leighshepperson/knights-travails#readme"
+}
