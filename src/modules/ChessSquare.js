@@ -24,6 +24,10 @@ class ChessSquare {
   get y() {
     return this._y;
   }
+
+  toString() {
+    return `${String.fromCharCode(this._x + 65)}${this._y + 1}`;
+  }
 }
 
 module.exports = ChessSquare;

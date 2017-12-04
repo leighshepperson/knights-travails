@@ -11,6 +11,13 @@ describe('ChessSquare', () => {
     expect(chessSquare.y).toEqual(5);
   });
 
+  describe('toString', () => {
+    test('it should return string representation of chess square', () => {
+      const chessSquare = new ChessSquare(3, 6);
+      expect(chessSquare.toString()).toEqual('D7');
+    });
+  });
+
   describe('parse', () => {
     const testCases = [
       {
