@@ -1,3 +1,5 @@
+'use strict';
+
 const ChessSquare = require('./ChessSquare');
 
 describe('ChessSquare', () => {
@@ -66,6 +68,8 @@ describe('ChessSquare', () => {
       },
     ];
 
+    const badTestCases = ['A0', 'A9', 'A88', 'XX', '!3', 'A-1'];
+
     testCases.map(({ input, x, y }) =>
       test(`should parse ${input} as ChessSquare with x = ${x} and y = ${
         y
@@ -76,10 +80,12 @@ describe('ChessSquare', () => {
       })
     );
 
-    test('should throw error if invalid input', () => {
-      const invalidParse = () => ChessSquare.parse('A9');
+    badTestCases.map(badInput =>
+      test('should throw error if invalid input', () => {
+        const invalidParse = () => ChessSquare.parse(badInput);
 
-      expect(invalidParse).toThrowError('Only values A1 to H8 are valid!');
-    });
+        expect(invalidParse).toThrowError('Only values A1 to H8 are valid!');
+      })
+    );
   });
 });

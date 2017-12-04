@@ -1,3 +1,5 @@
+'use strict';
+
 const KnightsTravalis = require('./KnightsTravalis');
 
 describe('KnightsTravalis', () => {

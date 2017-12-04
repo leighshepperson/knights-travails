@@ -1,3 +1,5 @@
+'use strict';
+
 const ChessSquare = require('./ChessSquare');
 
 const getPath = (frontSquare, prevSquareLookup, acc = []) => {

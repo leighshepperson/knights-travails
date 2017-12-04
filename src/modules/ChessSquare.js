@@ -1,6 +1,8 @@
+'use strict';
+
 class ChessSquare {
   static parse(name) {
-    if (!/[A-H][1-8]/.test(name)) {
+    if (!/^[A-H][1-8]$/.test(name)) {
       throw new Error('Only values A1 to H8 are valid!');
     }
 
