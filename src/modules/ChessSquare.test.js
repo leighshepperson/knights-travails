@@ -49,5 +49,11 @@ describe('ChessSquare', () => {
         expect(chessSquare.y).toEqual(y);
       })
     );
+
+    test('should throw error if invalid input', () => {
+      const invalidParse = () => ChessSquare.parse('A9');
+
+      expect(invalidParse).toThrowError('Only values A1 to H8 are valid!');
+    });
   });
 });

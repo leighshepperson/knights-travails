@@ -1,5 +1,9 @@
 class ChessSquare {
   static parse(name) {
+    if (!/[A-H][1-8]/.test(name)) {
+      throw new Error('Only values A1 to H8 are valid!');
+    }
+
     const [file, rank] = name;
 
     const x = file.charCodeAt(0) - 65;
