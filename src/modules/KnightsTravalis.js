@@ -1,7 +1,7 @@
 const ChessSquare = require('./ChessSquare');
 
 class KnightsTravalis {
-  static nextMoves(squareName) {
+  nextMoves(squareName) {
     const chessSquare = ChessSquare.parse(squareName);
 
     const moves = [
@@ -18,6 +18,10 @@ class KnightsTravalis {
     return moves
       .filter(nextSquare => nextSquare.isValid())
       .map(nextSquare => nextSquare.toString());
+  }
+
+  shortestPath(startSquare, endSquare) {
+    return [];
   }
 }
 
