@@ -1,8 +1,8 @@
 'use strict';
 
-const KnightsTravalis = require('./KnightsTravalis');
+const KnightsTravails = require('./KnightsTravails');
 
-describe('KnightsTravalis', () => {
+describe('KnightsTravails', () => {
   describe('nextMoves', () => {
     const testCases = [
       ['A1', ['C2', 'B3']],
@@ -11,8 +11,8 @@ describe('KnightsTravalis', () => {
 
     testCases.map(([square, nextSquares]) =>
       test(`should return next squares for ${square}`, () => {
-        const knightsTravalis = new KnightsTravalis();
-        expect(knightsTravalis.nextMoves(square)).toEqual(nextSquares);
+        const knightsTravails = new KnightsTravails();
+        expect(knightsTravails.nextMoves(square)).toEqual(nextSquares);
       })
     );
   });
@@ -22,14 +22,14 @@ describe('KnightsTravalis', () => {
 
     testCases.map(([start, end, length]) =>
       test(`the shortest path should have length ${length}`, () => {
-        const knightsTravalis = new KnightsTravalis();
-        expect(knightsTravalis.shortestPath(start, end).length).toEqual(length);
+        const knightsTravails = new KnightsTravails();
+        expect(knightsTravails.shortestPath(start, end).length).toEqual(length);
       })
     );
 
     test('should return the shortest path between A8 and B7', () => {
-      const knightsTravalis = new KnightsTravalis();
-      expect(knightsTravalis.shortestPath('A8', 'B7')).toEqual([
+      const knightsTravails = new KnightsTravails();
+      expect(knightsTravails.shortestPath('A8', 'B7')).toEqual([
         'C7',
         'B5',
         'D6',
@@ -38,8 +38,8 @@ describe('KnightsTravalis', () => {
     });
 
     test('should return empty array from same square', () => {
-      const knightsTravalis = new KnightsTravalis();
-      expect(knightsTravalis.shortestPath('A1', 'A1')).toEqual([]);
+      const knightsTravails = new KnightsTravails();
+      expect(knightsTravails.shortestPath('A1', 'A1')).toEqual([]);
     });
   });
 });

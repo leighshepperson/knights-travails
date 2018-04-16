@@ -1,7 +1,7 @@
 {
   "name": "knights-travails",
   "version": "1.0.0",
-  "description": "Knights Travalis",
+  "description": "Knights Travails",
   "main": "index.js",
   "dependencies": {
     "commander": "^2.12.2"
@@ -12,7 +12,8 @@
   },
   "scripts": {
     "test": "jest",
-    "test:w": "jest --watch"
+    "test:w": "jest --watch",
+    "shortestPath": "node index shortestPath"
   },
   "repository": {
     "type": "git",

@@ -1,8 +1,8 @@
 const program = require('commander');
-const KnightsTravalis = require('./src/modules/KnightsTravalis');
+const KnightsTravails = require('./src/modules/KnightsTravails');
 const ChessSquare = require('./src/modules/ChessSquare');
 
-program.version('1.0.0').description('Knights Travalis');
+program.version('1.0.0').description('Knights Travails');
 
 const validateInput = (startSquare, endSquare) => {
   ChessSquare.parse(startSquare);
@@ -18,8 +18,8 @@ program
   .action((startSquare, endSquare) => {
     try {
       validateInput(startSquare, endSquare);
-      const knightsTravalis = new KnightsTravalis();
-      const shortestPath = knightsTravalis.shortestPath(startSquare, endSquare);
+      const knightsTravails = new KnightsTravails();
+      const shortestPath = knightsTravails.shortestPath(startSquare, endSquare);
       console.log(shortestPath.join(' '));
     } catch (err) {
       console.log(err.message);

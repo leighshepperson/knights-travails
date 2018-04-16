@@ -13,7 +13,7 @@ const getPath = (frontSquare, prevSquareLookup, acc = []) => {
   return getPath(prevSquare, prevSquareLookup, acc);
 };
 
-class KnightsTravalis {
+class KnightsTravails {
   nextMoves(squareName) {
     const chessSquare = ChessSquare.parse(squareName);
 
@@ -59,4 +59,4 @@ class KnightsTravalis {
   }
 }
 
-module.exports = KnightsTravalis;
+module.exports = KnightsTravails;

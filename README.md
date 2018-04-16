@@ -1,4 +1,4 @@
-# Knights Travalis
+# Knights Travails
 
 Computes the shortest path a knight can take between two squares on a chess
 board.
@@ -60,4 +60,9 @@ shortestPath|sp <startSquare> <endSquare>  Returns the shortest path a knight ca
 node index shortestPath A8 B7
 
 C7 B5 D6 B7
+
+npm run shortestPath -- A8 B7
+
+C7 B5 D6 B7
+
 ```
